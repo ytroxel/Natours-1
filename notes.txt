@@ -1,0 +1,16 @@
+npm run compile:sass
+watch sass changes to css
+
+sudo npm install live-server -g
+install project into server global
+
+live-server
+run server
+
+
+Sass notes
+
+& - copy selector its in 
+&_logo-box - creates a .header_logo-box within header to nest
+
+use clearfix to fix height from float

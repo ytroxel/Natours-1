@@ -1,0 +1,12 @@
+@mixin clearfix {
+  //pent a psudeo element after the element to clear a float
+  //.row::after when placed in row element
+  &::after {
+    //specify content property otherwise a pseudo element wont appear on the page/ empty so we dont see element
+    content: "";
+    //display using table value standard version
+    display: table;
+    //property that performs clearfix clears both for float left and float right
+    clear: both;
+  }
+}

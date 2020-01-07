@@ -1,0 +1,57 @@
+.row {
+  max-width: 114rem;
+  background-color: pink;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  @include clearfix;
+
+  //attribute selector
+  //^ selector for all elements that starts with
+  //* select any classes which contain
+  // $ select any class that ends with
+  [class^="col-"] {
+    background-color: orangered;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+  // #{sass variable} syntax for using sass variable for calc()
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+
+  .col-1-of-3 {
+    //width of row 100% - number of gutters * gutter size / number of components
+    width: calc((100% - 2 * #{gutter-horizontal}) / 3);
+  }
+
+  .col-2-of-3 {
+    //width of row 100% - number of gutters * gutter size / number of components
+    width: calc(
+      2 * ((100% - 2 * #{gutter-horizontal}) / 3)+ #{$gutter-horizontal}
+    );
+  }
+
+  .col-1-of-4 {
+    //width of row 100% - number of gutters * gutter size / number of components
+    width: calc((100% - 3 * #{gutter-horizontal}) / 4);
+  }
+
+  .col-2-of-4 {
+    //width of row 100% - number of gutters * gutter size / number of components
+    width: calc(2 * ((100% - 3 * #{gutter-horizontal}) / 4)+ #{$gutter-horizontal});
+  }
+  .col-3-of-4 {
+    //width of row 100% - number of gutters * gutter size / number of components
+    width: calc(
+      3 * ((100% - 3 * #{gutter-horizontal}) / 4)+ #{$gutter-horizontal}
+    );
+  }
+}
