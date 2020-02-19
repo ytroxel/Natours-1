@@ -50,7 +50,7 @@
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8)), url(../img/bingsoo.PNG);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(13, 134, 54, 0.8)), url(../img/books.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -60,16 +60,41 @@
     } */ }
   .header__logo-box {
     position: absolute;
-    top: 4rem;
-    left: 4rem; }
+    top: 1rem;
+    left: 2rem; }
   .header__logo {
-    height: 3.5rem; }
+    font-size: 6rem;
+    font-weight: 800;
+    color: #fff; }
   .header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+
+.heading-primary--main {
+  display: block;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* animation delay: 3s;
+      animation-iteration-count: 3; */ }
+
+.heading-primary--sub {
+  display: block;
+  font-size: 1rem;
+  font-weight: 50;
+  letter-spacing: 1.74rem;
+  animation: moveInRight 1s ease-out; }
 
 .row {
   max-width: 114rem;
@@ -102,7 +127,7 @@
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 2rem;
   margin: 2rem;
   display: inline-block;
   border-radius: 3rem;
@@ -141,26 +166,3 @@
 .btn--animated {
   animation: moveInBottom 1s ease-out 1s;
   animation-fill-mode: backwards; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 700;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* animation delay: 3s;
-    animation-iteration-count: 3; */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.74rem;
-  animation: moveInRight 1s ease-out; }
